@@ -1,0 +1,158 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\Users\User> cd X:\ELIT\Лабы\GIT
+PS X:\ELIT\Лабы\GIT> ls
+PS X:\ELIT\Лабы\GIT> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS X:\ELIT\Лабы\GIT> git init
+Initialized empty Git repository in X:/ELIT/Лабы/GIT/.git/
+PS X:\ELIT\Лабы\GIT> git status
+No commits yet
+
+PS X:\ELIT\Лабы\GIT> git add log.txt
+PS X:\ELIT\Лабы\GIT> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   log.txt
+
+[master (root-commit) c40db87] log cmd
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 log.txt
+PS X:\ELIT\Лабы\GIT> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+and then push using the remote name
+
+    git push <name>
+
+PS X:\ELIT\Лабы\GIT> git remote add origin https://github.com/SladkayaDoza/GitSetup.git
+PS X:\ELIT\Лабы\GIT> git remote -v
+origin  https://github.com/SladkayaDoza/GitSetup.git (fetch)
+origin  https://github.com/SladkayaDoza/GitSetup.git (push)
+PS X:\ELIT\Лабы\GIT> ls
+
+
+    Каталог: X:\ELIT\Лабы\GIT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+
+
+PS X:\ELIT\Лабы\GIT> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+PS X:\ELIT\Лабы\GIT> git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 872 bytes | 72.00 KiB/s, done.
+From https://github.com/SladkayaDoza/GitSetup
+ * [new branch]      index.html -> origin/index.html
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+fatal: the requested upstream branch 'origin/<branch>' does not exist
+hint:
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+hint: Disable this message with "git config advice.setUpstreamFailure false"
+PS X:\ELIT\Лабы\GIT> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+PS X:\ELIT\Лабы\GIT> git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS X:\ELIT\Лабы\GIT> git push origin develop:master
+error: src refspec develop does not match any
+error: failed to push some refs to 'https://github.com/SladkayaDoza/GitSetup.git'
+PS X:\ELIT\Лабы\GIT> git pull origin develop:master
+fatal: couldn't find remote ref develop
+fatal: couldn't find remote ref master
+PS X:\ELIT\Лабы\GIT> git pull origin
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+fatal: 'inde.html' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+PS X:\ELIT\Лабы\GIT> git push index.html
+fatal: 'index.html' does not appear to be a git repository
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+PS X:\ELIT\Лабы\GIT> git remote -v
+origin  https://github.com/SladkayaDoza/GitSetup.git (fetch)
+origin  https://github.com/SladkayaDoza/GitSetup.git (push)
+PS X:\ELIT\Лабы\GIT> git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 213 bytes | 213.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/SladkayaDoza/GitSetup/pull/new/master
+remote:
+To https://github.com/SladkayaDoza/GitSetup.git
+ * [new branch]      master -> master
+PS X:\ELIT\Лабы\GIT> git add "Git lab5-6 mukhin kn-43.docx"
+PS X:\ELIT\Лабы\GIT> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git lab5-6 mukhin kn-43.docx
+
+PS X:\ELIT\Лабы\GIT> git commin -m "add zvit file"
+git: 'commin' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS X:\ELIT\Лабы\GIT> git commit -m "add zvit file"
+[master b67531b] add zvit file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git lab5-6 mukhin kn-43.docx
+PS X:\ELIT\Лабы\GIT> git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 180.86 KiB | 36.17 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/SladkayaDoza/GitSetup.git
+   c40db87..b67531b  master -> master
+PS X:\ELIT\Лабы\GIT>
